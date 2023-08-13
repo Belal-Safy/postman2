@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "57e75e7a-8b8b-4afd-a78b-d44aad0060c0",
+		"name": "2-Companies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "28168267-57e75e7a-8b8b-4afd-a78b-d44aad0060c0"
+	},
+	"item": [
+		{
+			"name": "Company Auth",
+			"item": [
+				{
+					"name": "login",
+					"id": "1ef26ce0-740e-4efd-b53d-7f9f13ee9267",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "belal.aglan2@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Bb12345!",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/login",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"id": "5133cd6a-0043-4bb4-8150-3dcf500100ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/me",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"id": "87ae340a-4cfd-42ee-a09b-ed84329fd856",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/logout",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"id": "974b365c-96a3-4bdc-aabc-d31a835b618f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "belal2@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/refresh-token",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"id": "e228ea54-caf2-4c09-95f6-9d10d9460505",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "content-lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"Bb12345!\",\r\n    \"new_password\": \"Bb12345!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/change-password",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-password-reset-token",
+					"id": "b2ff4160-6a1b-415b-95cb-e4aacdc2fe96",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "belal.aglan2@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/send-password-reset-token",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"send-password-reset-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-password-reset-token",
+					"id": "53b03be5-4341-4e46-beb2-2a679f5c3652",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"ORr9ZT702q9UIyt3BW04XDqe0FSPq4sg7Jn2Bdiflk8iAW51sb2BqrfAbi2T\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/check-password-reset-token",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"check-password-reset-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"id": "089639f5-abd4-44fd-9762-c56848b5c709",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"assssssssssssssssssssssssdcasds\",\r\n    \"new_password\": \"Bb12345#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/reset-password",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "is authenticated",
+					"id": "29529b21-6bbf-41ff-94a3-23ab2fdedddb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}/api/companies/auth/is-authenticated",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"auth",
+								"is-authenticated"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "7b961ea7-82a7-42b8-bbcf-b8166a9f0b4c"
+		}
+	]
+}
